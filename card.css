@@ -2,54 +2,119 @@
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-attachment: fixed
+    background-image: url(Fotos/hotel-riu-plaza-guadalajara.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
 }
 
+/*Contenedor principal, es donde se encuentran todos los elementos*/
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url(Fotos/hotel-riu-plaza-guadalajara.jpg);
-    background-position: center;
-    background-size: cover;
+    box-sizing: border-box;
     padding-left: 5%;
     padding-right:5%;
-    box-sizing: border-box;
+    /*background-position: center;
+    background-size: cover;*/
 }
 
+/*Aquí se determina la posición de el logo de la cruz roja, qué tan 
+arriba o abajo está además del alineamiento*/
 .logo_imagen{
     height: 20%;
     display: flex;
     align-items: center;
 }
 
+/*Todas las propiedades de la imagen de la cruz roja*/
 .icon{
     width: 150px;
     cursor: default;
 }
 
+/*Lo utilicé para poder darle formato a la imagen, poder ponerla en el lugar que necesitaba.
+La ventaja es que en este elemento, de ser necesario se pueden agregarmás cosas como texto u
+otras imagenes*/
 nav{
     flex: 1;
     text-align: right;
 }
 
+/*Es utilizado para oder contener el texto y las tarjetas*/
 .row{
     display: flex;
     height: 0px;
     align-items: center;
 }
 
+
 .col{
     flex-basis: 80%;
     cursor: default;
 }
 
+/*h1 y 5 dan formato a los textos*/
 h1{
     color: #fff;
     font-size: 100px;
 }
 
-.cards{
-    padding-top: 110px;
+h5{
+    color: rgb(226, 46, 46);
+    font-size: 25px;
+
+}
+
+/*Diferentes cualidades para las tarjetas*/
+.row1{
+    display: flex;
+    height: 45%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Todas las propiedades de las tarjetas*/
+.tarjeta{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+/*desde la 1-5 son para modificar elementos específicos, en este caso las imagen*/
+.tarjeta1{
+    background-image: url(Fotos/Hospital-La-Línea.jpg);
+}
+
+.tarjeta2{
+    background-image: url(Fotos/Hospital_cerrado.jpeg);
+}
+
+.tarjeta3{
+    background-image: url(Fotos/rehabilitado.jpg);
+}
+
+.tarjeta:hover{
+    transform:translateX(15px);
+}
+
+/*Para la columna de las tarjetas*/
+.column{
+    position:relative;
+    top: 300px;
+    right: 500px;
+    flex-basis: 80%;
+    cursor: default;
 }
