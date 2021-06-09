@@ -23,6 +23,8 @@ body{
     display: flex;
     align-items: center;
     overflow: hidden;
+    /* padding-bottom: 750px; */
+    
     
 }
 
@@ -40,6 +42,7 @@ body{
     padding-top:100px;
     align-items: center;
     z-index: 1;
+    /* padding-bottom: 750px; */
     
 }
 
@@ -48,6 +51,10 @@ h1{
     font-size: 100px;
 }
 
+h2{
+    color: #fff;
+    font-size: 45px;
+}
 /* Scroll */
 
 body::-webkit-scrollbar {
@@ -73,12 +80,13 @@ body::-webkit-scrollbar-track {
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    padding-top: 550px;
+    padding-top: 750px;
+    padding-bottom: 750px;
 }
 
 .container .card{
     background: #00ffb3;
-    width: 630px;
+    width: 1000px;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -88,7 +96,7 @@ body::-webkit-scrollbar-track {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left:5%;
-    transition: transform 0.8s;
+    transition: transform 0.5s;
 }
 
 .card .content{
@@ -97,8 +105,8 @@ body::-webkit-scrollbar-track {
 }
 
 .container .card .img{
-    height: 90px;
-    width: 90px;
+    height: 120px;
+    width: 120px;
 }
 
 .card .img img{
@@ -110,20 +118,29 @@ body::-webkit-scrollbar-track {
 
 .card .details{
     margin-left: 50px;
+    float: left;
+    
 }
 
 .card .data{
-    margin-left: 50px;
-
+    /* margin-left: 50px; */
+    position: relative;
+    top: 10px; left: 40px;
+    /* float: left; */
+    
 }
 
 .card:hover{
-    transform:translateX(250px);
+    transform:translateX(50px);
+}
+
+.details{
+    text-align: center;
 }
 
 .details span{
-    font-weight: 300;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 23px;
     margin-left: 0;
 }
 
@@ -133,4 +150,41 @@ body::-webkit-scrollbar-track {
     border-radius: 10px;
     color: #000000;
     background: linear-gradient(to bottom, #FC354C 0%, #0ABFBC 100%);
+}
+
+.name{
+    padding: 20px;
+}
+
+.dir{
+    margin-top: 30px;
+    font-size: 15px;
+
+}
+
+.button{
+    position: relative;
+    display: block;
+    height: 77px;
+    width: 300px;
+    border: 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color:rgb(48, 206, 108);
+    font-size: 18px;
+    border: 3px solid rgb(0, 255, 242);
+    margin-bottom: 30px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.regresar{
+    align-items: center;
+    margin-left:80%;
+    z-index: 1;
+    position:fixed;
+    right: 0;
+    bottom: 0;
 }
